@@ -1,0 +1,29 @@
+{
+  "type": "module",
+  "name": "muzidigbig-utils-npm",
+  "version": "1.0.9",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "muzidigbig",
+    "utils",
+    "npm",
+    "tools",
+    "array",
+    "screen",
+    "scroll",
+    "deepClone"
+  ],
+  "author": "muzidigbig",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9"
+  }
+}
