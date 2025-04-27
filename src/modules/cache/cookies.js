@@ -1,17 +1,19 @@
-/** 
- * 11. cookie的增删改查
- * name --> cookie名字
- * value --> cookie值
- * day --> cookie保存的天数
+/**
+ * 
+ * @param {string} name cookie名字
+ * @param {any} value cookie值
+ * @param {number} day cookie保存的时间
  */
 const setCookie = (name, value, day) => {
     var oDate = new Date();
     oDate.setDate(oDate.getDate() + day);
     document.cookie = name + "=" + value + ";expires" + oDate;
 }
-/** 
- * 11.1. 获取cookie值
- * name --> cookie的名字
+
+/**
+ * 
+ * @param {string} name cookie的名字
+ * @returns 
  */
 const getCookie = (name) => {
     var str = document.cookie;

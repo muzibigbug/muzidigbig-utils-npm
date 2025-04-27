@@ -1,6 +1,7 @@
-/* 
-    34 判断当前设备是Andoird还是iOS
-*/
+/**
+ * 判断当前设备是Andoird还是iOS
+ * @returns {number} 0: ios 1: android 2: other
+ */
 const isIOS = () => {
     let u = navigator.userAgent,
         app = navigator.appVersion
@@ -16,15 +17,19 @@ const isIOS = () => {
     }
 }
 
-/* 
-    检测设备
+/**
+ * 检测设备
+ * @returns {string} "Mobile" | "Desktop"
  */
 const isMobile = () =>
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
         navigator.userAgent
     ) ? "Mobile" : "Desktop";
 
-// 判断当前处于什么环境(浏览器环境 | 设备终端)
+/**
+ * 判断当前处于什么环境(浏览器环境 | 设备终端)
+ * @returns {object} 设备类型
+ */
 const browserType = () => {
     const userAgent = navigator.userAgent;
     const appVersion = navigator.appVersion;
@@ -51,6 +56,9 @@ const browserType = () => {
         version, language
     }
 }
+
+
+
 
 export {
     isIOS,

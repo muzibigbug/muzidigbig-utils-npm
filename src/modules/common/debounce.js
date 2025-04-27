@@ -1,4 +1,9 @@
-// 防抖
+/**
+ * 防抖函数
+ * @param {function} func 
+ * @param {number} delay 
+ * @returns {function}
+ */
 function debounce(func, delay) {
     let timeout;
     return function (...args) {

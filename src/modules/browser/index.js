@@ -3,11 +3,16 @@ import {
     isMobile,
     browserType
 } from './equipType';
-import { getQueryObject } from './getQueryObject';
+
+import {
+    getQueryObject
+} from './getQueryObject';
+
 import {
     fullScreen,
     exitScreen
 } from './screen';
+
 import {
     scrollTop,
     scrollLeft,

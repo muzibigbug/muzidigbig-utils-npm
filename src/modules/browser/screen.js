@@ -1,7 +1,7 @@
-/* 
-    36 进入和退出全屏
-*/
-// 进入全屏
+/**
+ * 进入全屏
+ * @returns {void} undefined
+ */
 const fullScreen = () => {
     let el = document.documentElement
     let rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullScreen
@@ -14,7 +14,11 @@ const fullScreen = () => {
         }
     }
 }
-// 退出全屏
+
+/**
+ * 退出全屏
+ * @returns {void} undefined
+ */
 const exitScreen = () => {
     let el = document
     let cfs = el.cancelFullScreen || el.webkitCancelFullScreen || el.mozCancelFullScreen || el.exitFullScreen

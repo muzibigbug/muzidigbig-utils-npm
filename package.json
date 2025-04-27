@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "muzidigbig-utils-npm",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,11 @@
     "array",
     "screen",
     "scroll",
-    "deepClone"
+    "deepClone",
+    "深拷贝",
+    "数组去重",
+    "统计数量",
+    "数组扁平化"
   ],
   "author": "muzidigbig",
   "license": "ISC",

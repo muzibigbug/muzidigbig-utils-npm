@@ -1,4 +1,9 @@
-// 节流
+/**
+ * 节流函数
+ * @param {function} func 
+ * @param {number} limit 
+ * @returns {function}
+ */
 function throttle(func, limit) {
     let lastFunc;
     let lastRan;

@@ -1,5 +1,5 @@
 /** 
- * 19. 浅拷贝
+ * 浅拷贝
  *  var obj1 = {
         'name' : 'zhangsan',
         'age' :  '18',
@@ -20,19 +20,19 @@ function shallowClone(initalObj) {
 }
 
 /** 
- * 20. 深拷贝
- *      var obj1 = {
-            name:{username:'muzi'},
-            age:22,
-            arr:[1,2,3,4],
-            say:function() {
-                console.log(this.name.username);
-            }
+ * 深拷贝
+*      var obj1 = {
+        name:{username:'muzi'},
+        age:22,
+        arr:[1,2,3,4],
+        say:function() {
+            console.log(this.name.username);
         }
-        var obj2 = deepClone(obj1);
+    }
+    var obj2 = deepClone(obj1);
 
 
-        JSON.parse(JSON.stringify(obj1)); // undefined和函数无法赋值
+    JSON.parse(JSON.stringify(obj1)); // undefined和函数无法赋值
 */
 function deepClone(initalObj) {
     // 要判断 initalObj 是对象还是数组
@@ -77,10 +77,20 @@ function deep(obj) {
 
     return targetObj
 }
-
+/**
+ * 一般用于深拷贝后端接口数据；不适用于函数、undefined和symbol 类型
+ * @param {array | object} obj 
+ * @returns {array | object}
+ * 
+ * 可能存在一下问题：
+ *  1.undefined、function、symbol 在转换后直接被忽略了
+ *  2.正则表达式转换成对象，日期转换成字符串
+ *  3.NaN、Infinity 直接变成 null
+ */
 function deepCopyByJSON(obj) {
     return JSON.parse(JSON.stringify(obj))
 }
+
 
 export {
     shallowClone,
