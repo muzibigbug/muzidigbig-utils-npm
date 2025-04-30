@@ -42,10 +42,43 @@ function replaceText(ele, txt) {
     return ele.innerText ? ele.innerText = txt : ele.textContext = txt;
 }
 
+/**
+ * 检查一个元素是否有一个类
+ * @param {HTMLElement} elm
+ * @param {string} cls
+ * @returns {boolean}
+ */
+function hasClass(ele, cls) {
+    return !!ele.className.match(new RegExp('(\\s|^)' + cls + '(\\s|$)'))
+}
+
+/**
+ * 向元素添加类
+ * @param {HTMLElement} elm
+ * @param {string} cls
+ */
+function addClass(ele, cls) {
+    if (!hasClass(ele, cls)) ele.className += ' ' + cls
+}
+
+/**
+ * 从元素中移除类
+ * @param {HTMLElement} elm
+ * @param {string} cls
+ */
+function removeClass(ele, cls) {
+    if (hasClass(ele, cls)) {
+        const reg = new RegExp('(\\s|^)' + cls + '(\\s|$)')
+        ele.className = ele.className.replace(reg, ' ')
+    }
+}
 
 export {
     bodyEle,
     createEleTxt,
     insertAfter,
-    replaceText
+    replaceText,
+    hasClass,
+    addClass,
+    removeClass,
 }

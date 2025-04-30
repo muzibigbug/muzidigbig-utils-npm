@@ -4,7 +4,7 @@
  * @param {number} delay 
  * @returns {function}
  */
-function debounce(func, delay) {
+function debounce(func, delay = 100) {
     let timeout;
     return function (...args) {
         const context = this;

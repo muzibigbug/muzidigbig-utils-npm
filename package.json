@@ -1,9 +1,9 @@
 {
   "type": "module",
   "name": "muzidigbig-utils-npm",
-  "version": "1.0.11",
+  "version": "1.0.13",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest"
   },
@@ -16,10 +16,14 @@
     "screen",
     "scroll",
     "deepClone",
+    "JSON",
+    "datetime",
+    "autoScale",
     "深拷贝",
     "数组去重",
     "统计数量",
-    "数组扁平化"
+    "数组扁平化",
+    "scale大屏适配"
   ],
   "author": "muzidigbig",
   "license": "ISC",

@@ -6,7 +6,7 @@ import {
 
 import {
     getQueryObject
-} from './getQueryObject';
+} from './getUrlParams';
 
 import {
     fullScreen,

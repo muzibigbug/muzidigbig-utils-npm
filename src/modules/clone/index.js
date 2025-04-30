@@ -91,10 +91,40 @@ function deepCopyByJSON(obj) {
     return JSON.parse(JSON.stringify(obj))
 }
 
+/**
+ * 深拷贝:通过指定属性进行深拷贝
+ */
+// deepCopyWithJsonAttrs(json,['name'])
+/**
+ * 深拷贝:通过指定属性进行深拷贝
+ * @param {object | array} obj 
+ * @param {array} attrs 
+ * @returns {object}
+ * 
+ * var obj = {
+        "name": "muzidigbig",
+        "age": "18",
+        "lists": [
+          {"name": "xxx1", "age": "28"},
+          {"name": "xxx2", "age": "29"},
+          {"name": "xxx3", "age": "30"}
+        ]
+      };
+ * deepCopyWithJsonAttrs(obj,['name']) => {name: 'muzidigbig'}
+ */
+const deepCopyWithJsonAttrs = (obj, attrs = []) => {
+    if (!Array.isArray(obj)) {
+        return attrs.length > 0 ? JSON.parse(JSON.stringify(obj, attrs)) : JSON.parse(JSON.stringify(obj))
+    }else{
+        return attrs.length > 0 ? JSON.parse(JSON.stringify(attrs.map(index => obj[index]).filter(item => item !== undefined))) : JSON.parse(JSON.stringify(obj))
+    }
+}
+
 
 export {
     shallowClone,
     deepClone,
     deep,
-    deepCopyByJSON
+    deepCopyByJSON,
+    deepCopyWithJsonAttrs,
 }

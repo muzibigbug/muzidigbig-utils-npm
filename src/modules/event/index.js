@@ -1,5 +1,5 @@
 /**
- * 4. 事件监听/移除(多个)
+ * 事件监听/移除(多个)
  * ele --> 事件源
  * type --> 事件类型不带on
  * fun --> 事件函数
@@ -22,7 +22,7 @@ function removeEvent(ele, type, fun, useCapture = false) {
     }
 }
 /** 
- * 5. 阻止事件的默认行为
+ * 阻止事件的默认行为
  */
 function preventDefault(event) {
     if (window.event) {
@@ -35,7 +35,7 @@ function preventDefault(event) {
 }
 
 /** 
- * 6. 阻止事件冒泡/事件传播
+ * 阻止事件冒泡/事件传播
  */
 function stopBubble(event) {
     if (event && event.stopPropagation) {
@@ -46,7 +46,7 @@ function stopBubble(event) {
     }
 }
 /**
- * 6.1. 阻止冒泡的另一种方式
+ * 阻止冒泡的另一种方式
  * 自己点击自己被处理
  */
 function stopBubble2(event) {

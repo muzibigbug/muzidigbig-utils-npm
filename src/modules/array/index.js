@@ -10,6 +10,36 @@ function randomArr(arr) {
 }
 
 /**
+ * 清空数组，会修改原数组
+ * @param {array} arr 
+ */
+const clearOriginaArr = (arr) => {
+    arr.length = 0;
+}
+
+/**
+ * 清空数组，不会修改原数组
+ * @param {array} arr 
+ * @returns {array} []
+ */
+const clearNoOriginaArr = (arr) => {
+    return arr.filter(() => false);
+}
+
+/**
+ * 获取数组中的最大值
+ * @param {array} arr 
+ * @returns {number} 最大值
+ * 
+ * var bb = [1,2,4,5,6,88,43.6,"98.5","2.6"]
+ * maxArr(bb) => 98.5
+ */
+const maxArr = (arr) => {
+    arr = arr.filter(item => +item)
+    return Math.max(...arr)
+}
+
+/**
  * 封装去重方法; 后出现不会覆盖前面; 不会改变原数组
  * @param {array} arr 
  * @param {sstring} uniqueKey 
@@ -149,6 +179,9 @@ const flatten2 = (arr) => {
 
 export {
     randomArr,
+    clearOriginaArr,
+    clearNoOriginaArr,
+    maxArr,
     removeDup,
     removeDup2,
     removeDupReplaceBefore,
